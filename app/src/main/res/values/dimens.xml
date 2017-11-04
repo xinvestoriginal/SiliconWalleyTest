@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nameTextSize">24sp</dimen>
+    <dimen name="priceTextSize">32sp</dimen>
+    <dimen name="logoSize">36dp</dimen>
+    <dimen name="tileMargin">8dp</dimen>
+    <dimen name="midMargin">6dp</dimen>
+    <dimen name="imageSize">128dp</dimen>
+</resources>
