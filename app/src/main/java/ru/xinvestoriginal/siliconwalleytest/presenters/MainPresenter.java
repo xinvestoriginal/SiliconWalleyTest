@@ -1,5 +1,7 @@
 package ru.xinvestoriginal.siliconwalleytest.presenters;
 
+import android.util.Log;
+
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.util.List;
@@ -60,8 +62,10 @@ public class MainPresenter {
         pointApi.getData().enqueue(new Callback<ResponseItem>() {
             @Override
             public void onResponse(Call<ResponseItem> call, Response<ResponseItem> response) {
+
                 if(response.isSuccessful()) {
                     items = response.body().message.points;
+
                     if (view != null) {
                         view.setProgressBarVisible(false);
                         view.onItemsLoad(items);
@@ -77,6 +81,7 @@ public class MainPresenter {
 
             @Override
             public void onFailure(Call<ResponseItem> call, Throwable t) {
+                Log.e("@@@","onFailure " + t.getMessage());
                 if (view != null) view.onItemsError();
                 t.printStackTrace();
             }

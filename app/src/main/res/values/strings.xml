@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SiliconWalleyTest</string>
+    <string name="error_connection">Error connection</string>
 </resources>

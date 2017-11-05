@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements IMain, View.OnTou
 
     @Override
     public void onItemsError() {
-
+        Toast.makeText(this,getString(R.string.error_connection),Toast.LENGTH_SHORT).show();
     }
 
     @Override
